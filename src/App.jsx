@@ -20,13 +20,16 @@ export default function App() {
   const [searched, setSearched] = useState(false); // ✅ new state
   const [selectedBook, setSelectedBook] = useState(null);
 
-  const fetchBooks = async (query) => {
+  const fetchBooks = async (query, type = "title") => {
     setLoading(true);
-    setSearched(true); // ✅ mark that user searched
+    setSearched(true);
     try {
-      const res = await fetch(
-        `https://openlibrary.org/search.json?title=${query}`
-      );
+      const url =
+        type === "author"
+          ? `https://openlibrary.org/search.json?author=${query}`
+          : `https://openlibrary.org/search.json?title=${query}`;
+
+      const res = await fetch(url);
       const data = await res.json();
       setResults(data.docs.slice(0, 20));
     } catch (err) {
