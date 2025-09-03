@@ -24,10 +24,14 @@ export default function App() {
     setLoading(true);
     setSearched(true);
     try {
-      const url =
-        type === "author"
-          ? `https://openlibrary.org/search.json?author=${query}`
-          : `https://openlibrary.org/search.json?title=${query}`;
+      let url = "";
+      if (type === "author") {
+        url = `https://openlibrary.org/search.json?author=${query}`;
+      } else if (type === "isbn") {
+        url = `https://openlibrary.org/search.json?isbn=${query}`;
+      } else {
+        url = `https://openlibrary.org/search.json?title=${query}`;
+      }
 
       const res = await fetch(url);
       const data = await res.json();

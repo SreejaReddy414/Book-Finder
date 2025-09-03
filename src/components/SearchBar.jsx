@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState("");
-  const [searchType, setSearchType] = useState("title"); // ✅ default title
+  const [searchType, setSearchType] = useState("title"); // default: title
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -24,6 +24,7 @@ const SearchBar = ({ onSearch }) => {
       >
         <option value="title">By Title</option>
         <option value="author">By Author</option>
+        <option value="isbn">By ISBN</option>
       </select>
 
       {/* Search Input */}
