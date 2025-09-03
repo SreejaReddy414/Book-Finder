@@ -6,7 +6,7 @@ Book Finder is a simple web app built with **React** and **Tailwind CSS** that a
 
 ## 🚀 Features
 
-- 🔍 Search books by title.  
+- 🔍 Search books by title, author and ISBN number.
 - 📖 View book details: title, author(s), first publish year.  
 - 🖼️ Book cover images from Open Library.  
 - 🎨 Clean, responsive UI built with Tailwind CSS.  
