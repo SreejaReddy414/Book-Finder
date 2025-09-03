@@ -80,14 +80,10 @@ Covers are fetched using the cover_i field:
 ```
 https://covers.openlibrary.org/b/id/{cover_i}-M.jpg
 ```
-### 📸 Screenshots (Optional)
-<img width="1919" height="866" alt="image" src="https://github.com/user-attachments/assets/59a0cbff-94ea-4e6a-8435-4cd5236e2ee6" />
-<img width="957" height="854" alt="image" src="https://github.com/user-attachments/assets/c5b6ed1a-bc66-49d8-bbb1-8471989efdcd" />
+
 
 
 ### ✨ Future Improvements
-Add filters (by author, subject, year).
-
 Add pagination or infinite scroll.
 
 Add dark mode toggle.
